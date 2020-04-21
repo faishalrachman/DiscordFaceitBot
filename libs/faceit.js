@@ -50,7 +50,7 @@ async function getPlayerInfo(nickname){
     const csgoId = playerInfo.guid;
     const hit2 = await (faceitApi.get(`/stats/v1/stats/users/${csgoId}/games/csgo`));
     const csgoData = hit2.data.lifetime;
-    return `**\n${nickname} a.k.a ${csgoInfo.game_name} (ID)
+    return `**\n${nickname} a.k.a ${csgoInfo.game_name} (${playerInfo.country.toUpperCase()})
 Level ${csgoInfo.skill_level}
 ELO: ${csgoInfo.faceit_csgo_elo || csgoInfo.faceit_elo}, Total Matches: ${csgoData.m1}, KD Ratio: ${csgoData.k5}, HeadShot Avg:  ${csgoData.k8}%, Win Rate: ${csgoData.k6}**
 https://steamcommunity.com/profiles/${playerInfo.steam_id_64}`;

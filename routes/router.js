@@ -3,7 +3,6 @@ const faceit = require('../libs/faceit')
 
 module.exports = (message) => {
     const content = message.content;
-    console.log(content);
     //static shits
     switch(content){
         case "!help": {
