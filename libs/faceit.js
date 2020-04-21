@@ -37,7 +37,7 @@ const faceitApi = axios.create({
     const avgElo1 = totalELO1/5;
     const avgElo2 = totalELO2/5;   
     const demo = payload.demoURL;
-    return `\n----------------\n${gameName} - ${gameServer}\n**${voted_str}**\n-----------------\n**${faction1Name}**\n*Total ${totalELO1} [${diffElo1}]*\nAvg ${avgElo1}\n\n${roster1}\n**${faction2Name}**\n*Total ${totalELO1} [${diffElo1}]*\nAvg ${avgElo1}\n\n${roster2}\n\nDemo: ${demo}`;
+    return `\n----------------\n${gameName} - ${gameServer}\n**${voted_str}**\n-----------------\n**${faction1Name}**\n*Total ${totalELO1} [${diffElo1}]*\nAvg ${avgElo1}\n\n${roster1}\n**${faction2Name}**\n*Total ${totalELO2} [${diffElo2}]*\nAvg ${avgElo2}\n\n${roster2}\n\nDemo: ${demo}`;
 }
 module.exports.getMatchInfo = getMatchInfo;
 

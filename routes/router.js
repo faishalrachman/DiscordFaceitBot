@@ -5,13 +5,13 @@ module.exports = (message) => {
     const content = message.content;
     //static shits
     switch(content){
-        case "!help": {
+        case "-help": {
             message.reply(template.help);
             return;
         }
     }
     //dynamics
-    var splitted_content = content.match("!(.*) (.*)$");
+    var splitted_content = content.match("-(.*) (.*)$");
     if (splitted_content != null){
         if (splitted_content[1] == "match"){
             faceit.getMatchInfo(splitted_content[2]).then(result => {
